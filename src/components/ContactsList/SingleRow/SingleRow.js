@@ -6,7 +6,7 @@ const SingleRow = (props) => {
 
   const personClickHandler = () => {
     setIsChecked(!isChecked);
-    console.log(props.id);
+    props.click();
   };
   return (
     <TableRow key={props.id} value={false}>
@@ -21,10 +21,7 @@ const SingleRow = (props) => {
       </TableCell>
 
       <TableCell padding="checkbox">
-        <Checkbox
-          onClick={() => personClickHandler(!isChecked)}
-          checked={isChecked}
-        />
+        <Checkbox onClick={personClickHandler} checked={isChecked} />
       </TableCell>
     </TableRow>
   );

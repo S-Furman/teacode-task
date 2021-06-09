@@ -8,6 +8,7 @@ import { compareNames } from "./compareNames";
 
 const ContactList = (props) => {
   const [fetchedData, setFetchedData] = useState([]);
+  const [toggledPeople, setToggledPeople] = useState([]);
 
   useEffect(() => {
     const url =
@@ -15,8 +16,27 @@ const ContactList = (props) => {
     fetch(url)
       .then((response) => response.json())
       .then((json) => json.sort(compareNames))
-      .then((sorted) => setFetchedData(sorted));
+      .then((sorted) => setFetchedData(sorted))
+      .catch((error) => {
+        console.error("fetch failed", error);
+      });
   }, []);
+
+  const personClickHandler = (id) => {
+    const toggledPeopleCopy = [...toggledPeople];
+
+    if (toggledPeopleCopy.includes(id)) {
+      const index = toggledPeople.indexOf(id);
+      toggledPeopleCopy.splice(index, 1);
+    } else {
+      toggledPeopleCopy.push(id);
+    }
+    setToggledPeople(toggledPeopleCopy);
+  };
+
+  useEffect(() => {
+    console.log(toggledPeople);
+  }, [toggledPeople]);
 
   return (
     <TableContainer component={Paper}>
@@ -34,6 +54,7 @@ const ContactList = (props) => {
                   firstName={person.first_name}
                   lastName={person.last_name}
                   avatar={person.avatar}
+                  click={() => personClickHandler(person.id)}
                 />
               );
             } else {
