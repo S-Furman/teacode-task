@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/teacode-task/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/teacode-task/static/js/main.9648db5e.chunk.js",
+    "main.js.map": "/teacode-task/static/js/main.9648db5e.chunk.js.map",
+    "runtime-main.js": "/teacode-task/static/js/runtime-main.a93d1bb1.js",
+    "runtime-main.js.map": "/teacode-task/static/js/runtime-main.a93d1bb1.js.map",
+    "static/js/2.ba5aa33b.chunk.js": "/teacode-task/static/js/2.ba5aa33b.chunk.js",
+    "static/js/2.ba5aa33b.chunk.js.map": "/teacode-task/static/js/2.ba5aa33b.chunk.js.map",
+    "static/js/3.db74402e.chunk.js": "/teacode-task/static/js/3.db74402e.chunk.js",
+    "static/js/3.db74402e.chunk.js.map": "/teacode-task/static/js/3.db74402e.chunk.js.map",
+    "index.html": "/teacode-task/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/teacode-task/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.ba5aa33b.chunk.js.LICENSE.txt": "/teacode-task/static/js/2.ba5aa33b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a93d1bb1.js",
+    "static/js/2.ba5aa33b.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.9648db5e.chunk.js"
+  ]
+}
